@@ -2,6 +2,7 @@ import AuthenticatedRoute from 'ghost/routes/authenticated';
 import CurrentUserSettings from 'ghost/mixins/current-user-settings';
 
 var TagsRoute = AuthenticatedRoute.extend(CurrentUserSettings, {
+    titleToken: 'Tags',
 
     beforeModel: function () {
         if (!this.get('config.tagsUI')) {
