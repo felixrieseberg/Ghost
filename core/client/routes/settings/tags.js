@@ -3,7 +3,8 @@ import CurrentUserSettings from 'ghost/mixins/current-user-settings';
 import PaginationRouteMixin from 'ghost/mixins/pagination-route';
 
 var TagsRoute = AuthenticatedRoute.extend(CurrentUserSettings, PaginationRouteMixin, {
-
+    titleToken: 'Tags',
+    
     actions: {
         willTransition: function () {
             this.send('closeSettingsMenu');

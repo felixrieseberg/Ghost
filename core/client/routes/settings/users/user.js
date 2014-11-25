@@ -9,6 +9,8 @@ var shortcuts = {},
 shortcuts[ctrlOrCmd + '+s'] = {action: 'save'};
 
 SettingsUserRoute = AuthenticatedRoute.extend(styleBody, ShortcutsRoute, {
+    titleToken: 'Users',
+
     classNames: ['settings-view-user'],
 
     model: function (params) {
